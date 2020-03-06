@@ -1,0 +1,129 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 770px;
+    width: 100vw;
+    background:url(../img/photo-1565058379802-bbe93b2f703a_1.jpg) center 100% no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover; 
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between; 
+    background-color:#000;
+    margin-bottom: 10px;
+    width: 100%;
+    margin:0 auto;
+    opacity: 0.6;
+}
+
+.logo{
+    font-family: "Chiller", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color:#fff;
+    margin-top: 22px;
+}
+.logo span{
+    font-size: 24px;
+    font-family: "Myriad Pro", sans-serif;
+}
+.logo a {
+    color:#fff;
+    text-decoration: none;
+    outline: none;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+ 
+}
+nav li{
+    margin-right: 40px; 
+    margin-top: 36px;
+    
+
+}
+nav li a{
+    text-decoration: none;
+    outline: none;
+    color:#fff;
+}
+nav a:hover{
+    border-top:1px solid #fff; 
+    color:#fff;
+}
+nav li a{
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 16px;   
+    color:#fff;
+
+}
+.header-text{
+    text-align: center;
+    margin-left: 80px;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 35px;
+    color:#fff;
+    width: 1015px;
+    margin-top: 300px;
+}
+
+.presentation{
+    display: flex;
+    height: 690px;
+}
+.presentation-img img{
+    width: 540px;
+    height: 682px;
+    margin-top: 10px;
+}
+.presentation-img img:after{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2;
+}
+.presentation-text{
+    margin-top: 150px;
+    margin-left: 130px;
+}
+.presentation-title{
+    font-size: 40px;
+    font-family: "Myriad Pro", sans-serif;
+    margin-bottom: 40px;
+}
+.presentation-descr{
+    font-size: 18px;
+    font-family: "Titillium Web",sans-serif;
+    margin-bottom: 30px;
+    width: 452px;
+    height: 120px;
+}
+.presentation-privilage{
+    font-size: 18px;
+    font-family: "Titillium Web",sans-serif;
+    margin-bottom: 43px;
+}
+.presentation-privilege li{
+    margin-bottom: 32px;
+}
+.presentation-btn a{
+    
+    margin-top: 70px;
+    padding: 12px 75px;
+    border:1px solid #000;
+}
