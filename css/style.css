@@ -1,14 +1,12 @@
+html, body {padding:0; margin:0;}
 .container{
+    min-width: 1000px;
     max-width: 1200px;
     margin: 0 auto;
 }
 header{
     position: relative;
-    margin:0 auto;
-    display: flex;
-    justify-content: space-between;
     height: 770px;
-    width: 100vw;
     background:url(../img/photo-1565058379802-bbe93b2f703a_1.jpg) center 100% no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -17,13 +15,16 @@ header{
 }
 
 .nav{
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between; 
-    background-color:#000;
-    margin-bottom: 10px;
-    width: 100%;
+    background:#000;
+    background-size: cover; 
     margin:0 auto;
-    opacity: 0.6;
+    opacity: 0.8;
+    width: 100vw;
+    z-index: 99;
 }
 
 .logo{
@@ -32,6 +33,7 @@ header{
     text-align: center;
     color:#fff;
     margin-top: 22px;
+    margin-left: 20px;
 }
 .logo span{
     font-size: 24px;
@@ -57,9 +59,12 @@ nav li a{
     text-decoration: none;
     outline: none;
     color:#fff;
+    padding: 5px;
+    transition:0.2s;
 }
 nav a:hover{
-    border-top:1px solid #fff; 
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff; 
     color:#fff;
 }
 nav li a{
@@ -68,14 +73,27 @@ nav li a{
     color:#fff;
 
 }
-.header-text{
+.features{
     text-align: center;
     margin-left: 80px;
     font-family: "Myriad Pro", sans-serif;
     font-size: 35px;
     color:#fff;
     width: 1015px;
-    margin-top: 300px;
+    padding-top: 300px;
+    margin: 0 auto;
+}
+.features-block p{
+    display: block;
+    font-size: 30px;
+    font-family: "Myriad Pro",sans-serif;
+    font-weight: 400;
+}
+.features-block h3{
+    font-size: 35px;
+    font-family: "Myriad Pro",sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .presentation{
@@ -103,7 +121,7 @@ nav li a{
 }
 .presentation-title{
     font-size: 40px;
-    font-family: "Myriad Pro", sans-serif;
+    font-family: "Myriad", sans-serif;
     margin-bottom: 40px;
 }
 .presentation-descr{

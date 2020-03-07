@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Tatoo</title>
@@ -14,16 +14,15 @@
 
     
 <header>
-  <div class="container">
   <section class="nav">
 
     <div class="logo">
-      <h1><a href=""> ASAGI`s <br><span>TATOOS</span></a></h1>
+      <h1><a href="#"> ASAGI`s <br><span>TATOOS</span></a></h1>
     </div>
     <nav>
       <ul>
         <li><a href="#">ГЛАВНАЯ</a></li>
-        <li><a href="#">ОБО МНЕ</a></li>
+        <li><a href="#presentation1">ОБО МНЕ</a></li>
         <li><a href="#">УСЛУГИ</a></li>
         <li><a href="#">ПОРТФОЛИО</a></li>
         <li><a href="#">ОБРАТНАЯ СВЯЗЬ</a></li>
@@ -33,10 +32,24 @@
 
     
   </section>
-  <div class="header-text">
-      <h2>Использую только качественные красители<br>Правильный выбор краски для тату - основа хорошего рисунка</h2>
+  <section class="features">
+      
+      <div class="features-slider">
+          <div class="features-block">
+              <h3>Использую только качественные красители.</h3>
+              <p>Правильный выбор краски для тату - основа хорошего рисунка</p>
+          </div>
+          <div class="features-block">
+              <h3>Приветствую индивидуальность.</h3>
+              <p>Разработаю для вас уникальный дизайн татуировки</p>
+          </div>
+          <div class="features-block">
+              <h3>Тату любой сложности.</h3>
+              <p>Сделаю татуировку любой сложности: от маленьких надписей до масштабных проектов.</p>
+
+      </div>
     </div>
-</div>
+  </section>
 </header>
 
 
@@ -44,7 +57,7 @@
 <main>
   <section class="top">
     
-  <div class="presentation">
+  <div class="presentation" id="presentation1">
     <div class="presentation-img">
       <img src="img/bV7mHpN-9CI.jpg" alt="Мастер">
     </div>
@@ -81,11 +94,23 @@
 <footer>
 
 </footer>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="slick/slick.min.js"></script>
 <script src="js/script.js"></script>
+
+<script type="text/javascript"> 
+  function slowScroll(id) { 
+      var offset = 1;
+      $('html, body').animate({ 
+           scrollTop: $(id).offset().top - offset 
+      }, 1000);
+      return false; 
+  } 
+</script>
 </body>
 </html>
