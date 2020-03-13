@@ -1,6 +1,12 @@
+*{
+box-sizing: border-box;
+}
 html, body {padding:0; margin:0;}
 body{
     outline: none;
+    background-color: #222222;
+    color:#fff;
+    font-family: "Oswald", sans-serif;
 }
 .container{
     min-width: 1000px;
@@ -15,6 +21,7 @@ header{
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover; 
+    background-position: center;
 }
 header:after {
     content: '';
@@ -31,7 +38,7 @@ header:after {
     position: fixed;
     top: 0;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     background:#000;
     background-size: cover; 
     margin:0 auto;
@@ -57,7 +64,7 @@ header:after {
 }
 .logo span{
     font-size: 24px;
-    font-family: "Myriad Pro", sans-serif;
+
 }
 .logo a {
     color:#fff;
@@ -88,7 +95,7 @@ nav a:hover{
     color:#fff;
 }
 nav li a{
-    font-family: "Myriad Pro", sans-serif;
+
     font-size: 16px;   
     color:#fff;
 
@@ -98,38 +105,41 @@ nav li a{
     z-index: 3;
     text-align: center;
     margin-left: 80px;
-    font-family: "Myriad Pro", sans-serif;
+
     font-size: 35px;
     color:#fff;
-    width: 1015px;
+    width: 90vw;
     padding-top: 300px;
     margin: 0 auto;
 }
 .features-block p{
     display: block;
     font-size: 30px;
-    font-family: "Myriad Pro",sans-serif;
     font-weight: 400;
 }
 .features-block h3{
     font-size: 35px;
-    font-family: "Myriad Pro",sans-serif;
+
     font-weight: 700;
     margin-bottom: 10px;
 }
+.features-btn {
+    text-align: center;
+    margin-top: 200px;
+}
 .features-btn img{
-    position: absolute;
-    top: 550px;
-    left: 500px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+.top{
+    min-width: 100vw;
 }
 
-.presentation{
+
+.presentation-inner{
     display: flex;
-    height: 690px;
-    box-shadow: 0px 0px 12px #999;
-    border: none;
+    margin:0 auto;
+    text-align: center;
 }
 .presentation-img img{
     width: 540px;
@@ -152,7 +162,6 @@ nav li a{
 }
 .presentation-title{
     font-size: 40px;
-    font-family: "Myriad", sans-serif;
     margin-bottom: 40px;
 }
 .presentation-descr{
@@ -163,23 +172,47 @@ nav li a{
     height: 120px;
 }
 .presentation-privilage{
+    display: flex;
     font-size: 18px;
     font-family: "Titillium Web",sans-serif;
     margin-bottom: 70px;
 }
+.presentation-privilege__inner{
+    display: flex;
+}
+.point{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ea6060;
+    margin-left: 24px;
+    margin-bottom: 23px;
+}
+.point-2{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+background-color: #ea6060;    
+margin-left: 85px;
+margin-bottom: 26px;
+}
+
 .presentation-privilege li{
     margin-bottom: 32px;
+    margin-left: 35px;
 }
 .presentation-btn a{
     text-decoration: none;
-    color:#000;
+    color:#fff;
     padding: 15px 75px;
-    border:1px solid #000;
+    border:1px solid #fff;
     transition:0.3s;
+    margin-top: 50px;
+    display: inline-block;
 }
 .presentation-btn a:hover{
-    color:#fff;
-    background-color: #222;
+    color:#222;
+    background-color: #fff;
 }
 
 
@@ -214,7 +247,42 @@ nav li a{
     height: 305px;
     margin-left: 20px;
     box-shadow: 3px 3px 15px #888;
+    
 }
+.portfolio-items a { 
+    display: block;
+     position: relative;
+}
+.row-2 .item a{
+    
+}
+.portfolio-items a:after { 
+    content: '';
+     position: absolute;
+      top: 0; left: 0;
+       right: 0;
+        bottom: 0;
+         background: rgba(0,0,0,.5);
+         margin-left: 20px;
+           opacity: 0; 
+        }
+
+.portfolio-items a:before { 
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/magnifer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0; 
+    transition: 1s;
+        }
+
+.portfolio-items a:hover:before,
+.portfolio-items a:hover:after { opacity: 1; }
+
 .row-1{
     margin-bottom: 120px;
     margin-left: 88px;
@@ -225,9 +293,9 @@ nav li a{
 }
 .portfolio-btn a{
     text-decoration: none;
-    color:#000;
+    color:#fff;
     padding: 15px 75px;
-    border:1px solid #000;
+    border:1px solid #fff;
     transition:0.3s;
     margin-left: 485px;
 }
@@ -235,8 +303,8 @@ nav li a{
     margin-bottom: 128px;
 }
 .portfolio-btn a:hover{
-    color:#fff;
-    background-color: #000;
+    color:#000;
+    background-color: #fff;
 }
 .portfolio-items .item{
 
