@@ -146,19 +146,10 @@ nav li a{
     max-height: 682px;
     margin-top: 5px;
 }
-.presentation-img img:before{
-    content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.5);
-  z-index: 7;
-}
+
 .presentation-text{
-    margin-top: 100px;
-    margin-left: 130px;
+    margin-top: 50px;
+    margin-left: 150px;
 }
 .presentation-title{
     font-size: 50px;
@@ -200,13 +191,29 @@ min-width: 35px;
 min-height: 35px;
 border-radius: 50%;
 background-color: #ea6060;    
-margin-left: 85px;
+margin-left: 78px;
 margin-bottom: 26px;
 }
 
 .presentation-privilege li{
     margin-bottom: 32px;
-    margin-left: 35px;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+#info-window{
+    width: 1130px;
+    height: 615px;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #b9b9b9;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3e3e3e;
+    display: none;
+}
+#info-window :target{
+    display: block;
 }
 .presentation-btn a{
     text-decoration: none;
@@ -214,14 +221,14 @@ margin-bottom: 26px;
     padding: 15px 75px;
     border:1px solid #fff;
     transition:0.3s;
-    margin-top: 50px;
+    margin-left: 40px;
+    margin-top: 20px;
     display: inline-block;
 }
 .presentation-btn a:hover{
     color:#222;
     background-color: #fff;
 }
-
 
 .portfolio{
     margin-top: 120px;
@@ -437,12 +444,13 @@ margin-bottom: 26px;
 }
 .feedback-text{
     margin-bottom: 65px;
+    min-width: 100px;
 }
 .feedback-addres{
     margin-bottom: 40px;
 }
 .feedback-phone{
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .feedback-icons img{
     max-width: 60px;
@@ -583,4 +591,32 @@ margin-bottom: 26px;
     body{
         max-width: none;
 }
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0,9);
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #000;
+}
+.close{
+    float: right;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
 }

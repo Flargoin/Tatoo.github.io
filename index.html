@@ -25,8 +25,8 @@
       <ul class="nav-menu">
         <li><a href="#features1">ГЛАВНАЯ</a></li>
         <li><a href="#presentation1">ОБО МНЕ</a></li>
-        <li><a href="#portfolio1">УСЛУГИ</a></li>
         <li><a href="#portfolio1">ПОРТФОЛИО</a></li>
+        <li><a href="#reviews1">ОТЗЫВЫ</a></li>
         <li><a href="#feedback1">ОБРАТНАЯ СВЯЗЬ</a></li>
       </ul>
     </nav>
@@ -79,7 +79,8 @@
       </div>
 
       <div class="presentation-descr">
-        Меня зовут Анастасия , я опытный квалифицированный специалист  по татуировке.<br><br> Решив сделать тату, помните: Мастер - это не просто человек с тату-машинкой, а тот, кто оставит на теле памятный след на всю жизнь. 
+        Меня зовут Анастасия , я опытный квалифицированный специалист  по татуировке.<br><br> Работаю в домашней обстановке , с профессиональным и стерильным оборудованием <br><br>
+        Если хотите воплотить в жизнь интересные идеи - я с удовольствием помогу в этом. За сеанс в 4-5 часов в фиксированную сумму мы можем успеть вполне внушительный объём работы.
       </div>
 
       <div class="presentation-privilege">
@@ -90,10 +91,51 @@
         </ul>
          
       </div>
+      
+      <button id="MyBtn">Доп.информация</button>
+      <div id="MyModal" class="modal">
+         <div class="modal-content">
+          <span><div class="close">&times;</div></span>
+        <p>Модальное окно!</p> 
+        </div>
+      </div>
+      
+      
+
+
+      <!--
        <div class="presentation-btn">
-      <a href="#">БОЛЬШЕ</a>
+      <a href="#info-window">БОЛЬШЕ</a>
     </div>
     </div>
+    <div id="info-window" >
+      <div class="info-window-title">
+        Дополнительная информация:
+      </div>
+
+      <div class="info-window-text-1">
+        После записи мы оговариваем место
+          <br> и дизайн эскиза. Разработка эскиза стоит
+          <br> 1500 рублей. Так же вы можете придти с своим
+          <br> эскизом.
+      </div>
+
+      <div class="info-window-text-2">
+        Затем мы назначаем дату и время сеанса. <br>
+        Предупредите, пожалуйста, заранее если не <br>
+        получаеться придти. Мы подумаем о новом <br>
+        ыремени сеанса.
+      </div>
+
+      <div class="info-window-text-3">
+        Цену и количество сеансов я озвучиваю  <br>
+        сразу. Несколько небольших тату сделаю <br>
+        со скидкой.
+      </div>
+-->
+
+    </div>
+
 </div>
 </div>
 </section>
@@ -123,17 +165,18 @@
     </div>
   </section>
 
-  <section class="reviews">
+  <section class="reviews" id="reviews1">
     <div class="container">
     <div class="reviews-inner">
     <div class="reviews-title">
       ОТЗЫВЫ
     </div>
+    
     <div class="reviews-slider">
       <div class="reviews-slider-block">
       <div class="reviews-img">
         <img src="img/reviews-img.jpg" alt="Фото">
-      </div>
+      </div></div>
       
       <div class="reviews-text">
         Спасибо большое Анастасие! Очень внимательный мастер! помогла выбрать прекрасное тату! Я довольная на все 100%
@@ -153,32 +196,6 @@
             Анастасия Шиленко
           </div>
         </div>
-
-
-          <div class="reviews-slider-block">
-            <div class="reviews-img">
-              <img src="img/reviews-img.jpg" alt="Фото">
-            </div>
-            <div class="reviews-text">
-              Спасибо большое Анастасие! Очень внимательный мастер! помогла выбрать прекрасное тату! Я довольная на все 100%
-            </div>
-            <div class="reviews-name">
-              Анастасия Шиленко
-            </div>
-          </div>
-
-            <div class="reviews-slider-block">
-              <div class="reviews-img">
-                <img src="img/reviews-img.jpg" alt="Фото">
-              </div>
-              <div class="reviews-text">
-                Спасибо большое Анастасие! Очень внимательный мастер! помогла выбрать прекрасное тату! Я довольная на все 100%
-              </div>
-              <div class="reviews-name">
-                Анастасия Шиленко
-              </div>
-            </div>
-  </div>
 
     </div>
     </div>
@@ -206,10 +223,8 @@
       </div>
       <div class="feedback-right">
         <div class="feedback-text">
-          Хотите сделать татуировку?<br>
-          Свяжитесь со мной.<br>
-          Больше работ можно посмотреть на<br> 
-          страницах в Вконтакте и Instagram.<br>
+          
+           Для записи достаточно прислать подробное<br> описание желаемой татуировки, либо уже готовый<br> эскиз с указанием размера в сантиметрах, огласить<br> место нанесения татуировки и желаемое время с датой. <br><br> Сумму озвучиваю сразу, без неприятных<br> неожиданностей после сеанса. Исключение- если<br> Вы передумали в дороге первоначальную идею, или внезапно захотели сделать несколько татуировок за раз
         </div>
 
         <div class="feedback-addres">
@@ -251,6 +266,7 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
 <script src="slick/slick.min.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/active.js"></script>
 <script src="js/slider.js"></script>
