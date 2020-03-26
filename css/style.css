@@ -88,11 +88,11 @@ nav li a{
     outline: none;
     color:#fff;
     padding: 5px;
-    transition:0.2s;
+    transition:0.1s;
 }
 nav a:hover{
-    border-top:2px solid #fff;
-    border-bottom:2px solid #fff; 
+    border-top:2px solid #ea6060;
+    border-bottom:2px solid #ea6060; 
     color:#fff;
 }
 nav li a{
@@ -220,14 +220,25 @@ margin-bottom: 26px;
     color:#fff;
     padding: 15px 75px;
     border:1px solid #fff;
-    transition:0.3s;
+    transition:0.1s;
     margin-left: 40px;
     margin-top: 20px;
     display: inline-block;
 }
+a.close{
+    padding: 0;
+    margin: 0;
+    border:none;
+    color:#ea6060;
+}
+a.close:hover{
+    color: #222;
+    background-color: none;
+    border-radius: 50%;
+}
 .presentation-btn a:hover{
-    color:#222;
-    background-color: #fff;
+    text-shadow:0px 0px 15px #ea6060;
+    box-shadow: 0px 0px 10px #ea6060;
 }
 
 .portfolio{
@@ -245,6 +256,8 @@ margin-bottom: 26px;
     font-family: "Myriad Pro",sans-serif;
     font-size: 50px;
     font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom:3px solid #ea6060;
 }
 .portfolio-descr{
     text-align: center;
@@ -262,12 +275,17 @@ margin-bottom: 26px;
     min-height: 305px;
     max-height: 306px;
     margin-left: 20px;
-    box-shadow: 3px 3px 15px #888;
-    
 }
 .portfolio-items a { 
     display: block;
      position: relative;
+    
+}
+
+.item img:hover{
+width: 290px;
+height: 290px;
+margin-left: 20px;
 }
 .row-2 .item a{
     
@@ -279,7 +297,7 @@ margin-bottom: 26px;
        right: 0;
         bottom: 0;
          background: rgba(0,0,0,.5);
-         margin-left: 20px;
+           
            opacity: 0; 
         }
 
@@ -294,10 +312,11 @@ margin-bottom: 26px;
     background-position: center;
     opacity: 0; 
     transition: 0.6s;
+    
         }
 
 .portfolio-items a:hover:before,
-.portfolio-items a:hover:after { opacity: 1; }
+.portfolio-items a:hover:after { opacity: 1;width: 306px;height: 306px;margin-left: 20px;  box-shadow: 0px 0px 10px #ea6060;}
 
 .row-1{
     margin-bottom: 120px;
@@ -319,8 +338,8 @@ margin-bottom: 26px;
     margin-bottom: 128px;
 }
 .portfolio-btn a:hover{
-    color:#000;
-    background-color: #fff;
+    text-shadow:0px 0px 15px #ea6060;
+    box-shadow: 0px 0px 10px #ea6060;
 }
 .portfolio-items .item{
 
@@ -379,9 +398,10 @@ margin-bottom: 26px;
     left: 575px;
     min-width: 135px;
     min-height: 135px;
-    m-width: 135px;
+    max-width: 135px;
     max-height: 135px;
     border-radius: 50%;
+    border:5px solid #ea6060;
 }
 .reviews-name{
     color:#fff;
@@ -390,6 +410,9 @@ margin-bottom: 26px;
     position: absolute;
     top: 445px;
     left: 550px;
+    padding: 10px 0px;
+    border-top: 2px solid #ea6060;
+    border-bottom: 2px solid #ea6060;
 }
 
 .feedback-inner{
@@ -424,12 +447,28 @@ margin-bottom: 26px;
     color: #fff;
     border: 1px solid #11110f ;
 }
+form input{
+    transition: 0.3s;
+}
+form textarea{
+    transition: 0.3s;
+}
+form input:hover{
+    box-shadow: 0px 0px 5px #ea6060;
+}
+form textarea:hover{
+    box-shadow: 0px 0px 5px #ea6060;
+}
 .form-btn{
     padding: 20px 35px;
     background-color: #ea6060;
     border-radius:3px;
      text-decoration: none;
      color:#fff;
+     transition: 0.3s;
+}
+.form-btn:hover{
+    box-shadow: 0px 0px 5px #fff;
 }
 .form-btn a{
     font-size: 18px;
@@ -587,36 +626,190 @@ margin-bottom: 26px;
         flex-direction: column;
     }
 }
-@media (max-width:768px){
-    body{
-        max-width: none;
-}
-}
 
-.modal{
-    display: none;
+
+/* слой затемнения */
+ 
+.dm-overlay {
     position: fixed;
-    z-index: 99999;
-    left: 0;
     top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0,9);
+    z-index: 1000;
 }
-
-.modal-content{
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    color: #000;
+/* активируем модальное окно */
+ 
+.dm-overlay:target {
+    display: block;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
 }
-.close{
+/* блочная таблица */
+ 
+.dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+/* ячейка блочной таблицы */
+ 
+.dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+/* модальный блок */
+ 
+.dm-modal {
+    text-align: center;
+    display: inline-block;
+    padding: 50px;
+    max-width: 50em;
+    background: #333;
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    color: #cfd8dc;
+    text-align: left;
+    border-radius: 15px;
+    border: 3px solid #ea6060;
+    box-shadow: 0px 0px 15px #ea6060;
+}
+.dm-modal h3{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ea6060;
+}
+.dm-modal h3 span{
+    margin-left: 25px;
+}
+.dm-modal p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* изображения в модальном окне */
+ 
+.dm-modal img {
+    width: 100%;
+    height: auto;
+}
+/* миниатюры изображений */
+ 
+.pl-left,
+.pl-right {
+    width: 25%;
+    height: auto;
+}
+/* миниатюра справа */
+ 
+.pl-right {
     float: right;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
+    margin: 5px 0 5px 15px;
+}
+/* миниатюра слева */
+ 
+.pl-left {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+/* встраиваемое видео в модальном окне */
+ 
+.video {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* рисуем кнопарь закрытия */
+ 
+.close {
+    z-index: 9999;
+    float: right;
+    width: 35px;
+    height: 35px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    line-height: 36px;
+    cursor: pointer;
+}
+.close:after {
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    content: 'X';
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+    color: black;
+}
+/* кнопка закрытия при наведении */
+ 
+.close:hover:after {
+    border-color: #fff;
     color: #fff;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+/* варианты фонвой заливки модального блока */
+ 
+.green {
+    background: #388e3c!important;
+}
+.cyan {
+    background: #0097a7!important;
+}
+.teal {
+    background: #00796b!important;
+}
+/* движуха при появлении блоков с содержанием */
+ 
+@-moz-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
 }
