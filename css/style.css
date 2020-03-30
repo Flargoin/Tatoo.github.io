@@ -141,10 +141,17 @@ nav li a{
     margin:0 auto;
     text-align: center;
 }
+.presentation-img{
+    border-left:12px solid #ea6060;
+    border-bottom: 20px solid #ea6060;
+    border-radius: 10px;
+}
 .presentation-img img{
     max-width: 540px;
     max-height: 682px;
     margin-top: 5px;
+    
+    box-shadow: 0px 0px 25px #000;
 }
 
 .presentation-text{
@@ -155,6 +162,10 @@ nav li a{
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 50px;
+}
+.presentation-title h3{
+    padding-bottom: 20px;
+    border-bottom:3px solid #ea6060;
 }
 .presentation-descr{
     font-size: 21px;
@@ -175,29 +186,38 @@ nav li a{
     display: flex;
 }
 .point{
-    max-width: 35px;
-    max-height: 35px;
-    min-width: 35px;
-    min-height: 35px;
+    max-width: 55px;
+    max-height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     border-radius: 50%;
     background-color: #ea6060;
-    margin-left: 24px;
+    margin-left: 13px;
     margin-bottom: 23px;
+    position: relative;
+}
+.point-1::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:'';
+    background: url(../img/presentaton.png);
 }
 .point-2{
-max-width: 35px;
-max-height: 35px;
-min-width: 35px;
-min-height: 35px;
+    position: relative;
+max-width: 55px;
+max-height: 55px;
+min-width: 55px;
+min-height: 55px;
 border-radius: 50%;
 background-color: #ea6060;    
-margin-left: 78px;
+margin-left: 70px;
 margin-bottom: 26px;
 }
 
 .presentation-privilege li{
     margin-bottom: 32px;
-    margin-left: 40px;
+    margin-left: 36px;
     margin-top: 100px;
 }
 
@@ -325,6 +345,9 @@ margin-left: 20px;
 .row-2{
     margin-left: 88px;
     margin-bottom: 160px;
+}
+.item a{
+    outline:none;
 }
 .portfolio-btn a{
     text-decoration: none;
