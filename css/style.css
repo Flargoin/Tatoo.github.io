@@ -147,8 +147,8 @@ nav li a{
     border-radius: 10px;
 }
 .presentation-img img{
-    max-width: 540px;
-    max-height: 682px;
+    max-width: 557px;
+    max-height: 695px;
     margin-top: 5px;
     
     box-shadow: 0px 0px 25px #000;
@@ -173,7 +173,7 @@ nav li a{
     margin-bottom: 30px;
     max-width: 400px;
     max-height: 120px;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-bottom: 100px;
 }
 .presentation-privilage{
@@ -196,12 +196,15 @@ nav li a{
     margin-bottom: 23px;
     position: relative;
 }
-.point-1::after{
+.point::after{
     position: absolute;
-    top: 0;
-    left: 0;
-    content:'';
-    background: url(../img/presentaton.png);
+    top: 15px;
+    left: 24px;
+    content:'!';
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+
 }
 .point-2{
     position: relative;
@@ -213,6 +216,15 @@ border-radius: 50%;
 background-color: #ea6060;    
 margin-left: 70px;
 margin-bottom: 26px;
+}
+.point-2::after{
+    position: absolute;
+    top: 15px;
+    left: 24px;
+    content:'!';
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .presentation-privilege li{
