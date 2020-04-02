@@ -959,3 +959,30 @@ body{
     margin-left: -50px;
 }
 }
+
+@media (max-width:480px){
+body{
+    max-width: 480px;
+}
+.features-block h3{
+    font-size: 35px;
+}
+.features-block p{
+    font-size: 25px;
+}
+.presentation-img img{
+    display: none;
+}
+.presentation-descr{
+    margin-left: -10px;
+}
+.presentation-privilege__inner{
+    margin-left: -30px;
+}
+.point-2{
+    margin-left: 20px;
+}
+.presentation-privilege__inner li{
+    font-size: 14px;
+}
+}
