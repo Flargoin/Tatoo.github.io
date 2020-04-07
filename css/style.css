@@ -14,6 +14,91 @@ body{
     margin: 0 auto;
     padding: 0 15px;
 }
+.mobile-header-title{
+    display: none;
+}
+.menu-btn{
+    display: none;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    position: relative;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after{
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .menu-btn span:before,
+  .menu-btn span:after{
+   content:'';
+    display: block;
+    transition:0.2ws;
+  }
+  .menu-btn span:before{
+    transform:translateY(-6px);
+  }
+  .menu-btn span:after{
+    transform:translateY(6px);
+  }
+  .menu-btn_active span:before{
+    transform:rotate(-45deg);
+    background-color: #fff;
+  }
+  .menu-btn_active span{
+   height:0px;
+  }
+  .menu-btn_active span:after{
+    transform:rotate(45deg);
+    background-color: #fff;
+  }
+  .menu-block {
+      z-index: 5;
+    position: relative;
+
+  }
+  .menu-nav a {
+    text-decoration: none;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 100;
+    display: inline-block;
+    margin-right: 20px;
+    transition: 1s;
+    color: #fff;
+  }
+  .menu-nav {
+    transition: 0.2s;
+    transform: scaleX(0) translateX(0%);
+    transform-origin: right center;
+    opacity: 0;
+    visibility: hidden;
+    height: 50px;
+    line-height: 50px;
+    
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: -25px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .menu-nav_active {
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  
+
 header{
     position: relative;
     height: 770px;
@@ -461,7 +546,9 @@ margin-left: 20px;
     font-size: 50px;
     font-weight: 700;
     font-family: "Myriad Pro", sans-serif;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #ea6060;
+    padding-bottom: 10px;
 }
 .feedback-left form input{
     width: 385px;
@@ -508,42 +595,57 @@ form textarea:hover{
 .form-btn a{
     font-size: 18px;
     font-family: "Myriad Pro", sans-serif;
-    
-   
-
+}
+.feedback-left form{
+    margin-left: 160px;
 }
 .feedback-right{
     font-size: 22px;
     margin-left: 55px;
 }
 .feedback-text{
+    text-align: center;
+    max-width: 500px;
+    margin-left: 110px;
     margin-bottom: 65px;
     min-width: 100px;
 }
 .feedback-addres{
+    display: none;
     margin-bottom: 40px;
 }
 .feedback-phone{
+    display: none;
     margin-bottom: 50px;
 }
 .feedback-icons img{
+    
     max-width: 60px;
     max-height: 60px;
    
 }
 .vk{
+    position: absolute;
+    top: 4310px;
+    left: 1020px;
     transition: 0.4s;
+    border-radius: 8px;
 }
 .vk:hover{
-     box-shadow: 0px 0px 10px #1976d2;
-    border-radius: 50%;
+    padding: -10px;
+    
+    box-shadow: 2px 2px 10px #98ccfd;
 }
 .inst{
+    position: absolute;
+    top: 4310px;
+    left: 950px;
     transition: 0.4s;
+    border-radius: 15px;
 }
 .inst:hover{
     box-shadow: 0px 0px 10px #bd82f4;
-    border-radius: 13px;
+    
 }
 
 
@@ -839,8 +941,13 @@ form textarea:hover{
     .feedback-title{
         margin-bottom: 40px;
     }
-    .feedback-icons{
-        display: none;
+    .vk{
+        top: 5030px;
+        left: 600px;
+    }
+    .inst{
+        top: 5030px;
+        left: 530px;
     }
     .feedback-left form{
         margin-bottom: 100px;
@@ -869,6 +976,9 @@ form textarea:hover{
     }
     .portfolio-items{
         display: flex;
+    }
+    .portfolio-items a{
+        
     }
     .portfolio-descr{
         margin-left: 70px;
@@ -916,13 +1026,22 @@ form textarea:hover{
     .feedback-phone{
         display: none;
     }
-    .feedback-icons{
-        display: none;
+    .vk{
+        top: 5375px;
+        left: 480px;
+    }
+    .inst{
+        top: 5375px;
+        left: 410px;
     }
     .feedback-left form{
         margin-bottom: 100px;
         margin-left: -40px;
     }
+    .portfolio-items a:hover:before,
+.portfolio-items a:hover:after{
+    margin-left: 10px;
+}
 
 }
 
@@ -959,7 +1078,257 @@ body{
     margin-left: -50px;
 }
 }
+@media (max-width:690px){
+    body{
+        max-width: 690px;
+    }
+    .nav{
+        display: none;
+    }
+    .features-btn img{
+        margin-top: -130px;
+    }
+    .mobile-header-title{
+        display: block;
+        font-family: "Chiller", sans-serif;
+        font-size: 40px;
+        z-index: 5;
+        position: absolute;
+        left: 37%;
+        top: 70px;
+        padding: 40px;
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 7px #ea6060;
+        border-radius: 25%;
+        text-align: center;
+        text-shadow: 2px 0px 13px #ea6060;
+    }
+    .menu-btn{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 30px;
+    }
+    .presentation-img img{
+        margin-left: 100px;
+    }
+    .presentation-title h3{
+        margin-right: 25px;
+    }
+    .presentation-descr{
+        margin-left: 85px;
+    }
+    .point-2{
+        margin-left: 55px;
+    }
+    .row-1{
+        display: none;
+    }
+    .row-2{
+        margin-left: 290px;
+        margin-bottom: 100px;
+    }    
+    .portfolio-btn a {
+        margin-left: 470px;
+    }
+    .feedback-text{
+        margin-left: -90px;
+    }
+    .feedback-left form{
+        margin-left: -70px;
+    }
+    .inst{
+        top: 5340px;
+        left: 410px;
+    }
+    .vk{
+        top: 5340px;
+        left: 480px;
+    }
 
+    @media (max-width:640px){    
+        body{
+            max-width: 640px;
+        }
+        .features-btn img{
+            margin-top: -280px;
+        }
+        .presentation-descr{
+            margin-left: 60px;
+        }
+        .point{
+            margin-left: 25px;
+        }
+        .point-2{
+            margin-left: 30px;
+        }
+        .presentation-privilege__inner li{
+            font-size: 16px;
+        }
+        .portfolio-descr{
+            margin-left: 10px;
+        }
+        .portfolio-items{
+            margin-left: -150px;
+        }
+        .portfolio-btn a{
+           margin-left: 420px; 
+        }
+        .reviews-title{
+            margin-left: -280px;
+        }
+        .reviews-img img{
+            margin-left: -295px;
+        }
+        .reviews-text{
+            margin-left: -290px;
+        }
+        .reviews-name{
+            margin-left: -295px;
+        }
+        .feedback-text{
+            margin-left: -115px;
+        }
+        .feedback-left form{
+            margin-left: -100px;
+        }
+        .inst{
+            top: 5320px;
+            left: 340px;
+        }
+        .vk{
+            top: 5320px;
+            left: 405px;
+        }
+    @media (max-width:540px){
+        body{
+            max-width: 540px;
+        }
+        .menu-nav a{
+            font-size: 15px;
+        }
+        .presentation-img img{
+            display: none;
+        }
+        .presentation-descr{
+            margin-left: 10px;
+        }
+        .presentation-privilege__inner{
+            margin-left:-20px;
+        }
+        .presentation-privilege__inner li{
+            font-size: 14px;
+        }
+        .point-2{
+            margin-left: 25px;
+        }
+        .portfolio-items{
+            margin-left: -195px;
+        }
+        .portfolio-btn a{
+            margin-left: 375px;
+        }
+        .reviews-title{
+            margin-left: -325px;
+        }
+        .reviews-img img{
+            margin-left: -330px;
+        }
+        .reviews-text{
+            margin-left: -330px;
+        }
+        .reviews-name{
+            margin-left: -335px;
+        }
+        .feedback-text{
+            margin-left: -170px;
+        }
+        .feedback-left form{
+            margin-left: -150px;
+        }
+        .inst{
+            top: 4640px;
+            left: 290px;
+        }
+        .vk{
+            top: 4640px;
+            left: 355px;
+        }
+        @media (max-width:480px){
+            .menu-nav a{
+                font-size: 13px;
+            }
+            .mobile-header-title{
+                left: 33%;
+                top: 100px;
+            }
+            .features-block h3{
+                font-size: 40px;
+            }
+            .features-block p{
+                font-size: 25px;
+            }
+            .presentation-descr{
+                margin-left: -20px;
+            }
+            .presentation-privilege__inner{
+                margin-left: -45px;
+            }
+            .presentation-btn a{
+                margin-left: 20px;
+            }
+            .portfolio-items{
+                margin-left: -225px;
+            }
+            .portfolio-btn a{
+                margin-left: 350px;
+            }
+            .reviews-title{
+                margin-left: -360px;
+            }
+            .reviews-img img{
+                margin-left: -360px;
+            }
+            .reviews-text{
+                margin-left: -360px;
+            }
+            .reviews-name{
+                margin-left: -360px;
+            }
+            .feedback-text{
+                margin-left: -200px;
+            }
+            .feedback-left form{
+                margin-left: -180px;
+            }
+            .inst{
+                top: 4665px;
+            }
+            .vk{
+                top: 4665px;
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 @media (max-width:480px){
 body{
     max-width: 480px;
@@ -986,3 +1355,4 @@ body{
     font-size: 14px;
 }
 }
+*/ 
