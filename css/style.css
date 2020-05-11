@@ -10,6 +10,7 @@ body {
   font-family: "Myriad Pro", sans-serif;
   color: #fff;
   background-color: #222;
+  width: 100vw;
 }
 .container {
   max-width: 1200px;
