@@ -709,6 +709,13 @@ header:after {
   .feedback-phone{
       display:none;
   }
+
+  .modal-dialog{
+      width: 80%;
+  }
+  .modal-title{
+      font-size: 27px;
+  }
 }
 
 @media (max-width:480px){
