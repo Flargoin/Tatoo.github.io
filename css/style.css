@@ -685,14 +685,17 @@ header:after {
   .feedback-inner{
       position: relative;
       flex-wrap: wrap;
+      justify-content: center;
   }
   .feedback-left{
       order:2;
   }
   .feedback-form input{
+      width: 350px;
       height: 50px;
 }
     .feedback-form textarea{
+        width: 350px;
         height: 180px;
     }
   .feedback-right{
