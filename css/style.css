@@ -25,7 +25,6 @@ header {
   height: 770px;
   background: url(../img/photo-1565058379802-bbe93b2f703a_1.jpg) center 100%
     no-repeat;
-    height: 100vh;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -718,11 +717,21 @@ header:after {
   }
 }
 
+@media (max-width: 655px){
+   .nav-menu li a{
+    font-size: 13px;
+    margin-right: 0px;   
+   } 
+}
+
 @media (max-width:480px){
-.header__inner{
+.header{
+    height: 90vh;
+}
+    .header__inner{
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 35px;
 }
 
 .top-slider{
@@ -802,3 +811,10 @@ header:after {
     font-size: 24px;
 }
 }
+
+@media (max-width:350px){
+    
+    .header{
+        height: 100vh;
+    }
+    }
